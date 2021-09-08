@@ -14,8 +14,26 @@ const FilterElement = styled.div`
 function Filter () {
   return(
     <FilterElement>
-      <Sort title="Количество пересадок"/>
-      <Sort title="Сортировать билеты"/>
+      <Sort
+        title="Количество пересадок"
+        inputs={[
+          {type: "checkbox", body: "Все", name: "all", onChangeHandler: () => {}},
+          {type: "checkbox", body: "Без пересадок", name: "no", onChangeHandler: () => {}},
+          {type: "checkbox", body: "1 пересадка", name: "1", onChangeHandler: () => {}},
+          {type: "checkbox", body: "2 пересадки", name: "2", onChangeHandler: () => {}},
+          {type: "checkbox", body: "3 пересадки", name: "3", onChangeHandler: () => {}},
+        ]}
+      />
+      <Sort
+        title="Сортировать билеты"
+        inputs={[
+          {type: "radio", body: "Все", name: "sort", onChangeHandler: () => {}},
+          {type: "radio", body: "По цене (возраст.)", name: "sort", onChangeHandler: () => {}},
+          {type: "radio", body: "По цене (убыв.)", name: "sort", onChangeHandler: () => {}},
+          {type: "radio", body: "Время в полете (возраст.)", name: "sort", onChangeHandler: () => {}},
+          {type: "radio", body: "Время в полете (убыв.)", name: "sort", onChangeHandler: () => {}},
+        ]}
+      />
     </FilterElement>
   );
 }
