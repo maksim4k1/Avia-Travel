@@ -1,0 +1,51 @@
+*{padding: 0; margin: 0; border: 0;}
+
+*,*:before,*:after{
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+html{scroll-behavior: smooth;}
+input,button,textarea{font-family: inherit; font-size: inherit; color: inherit; background: none;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer; background: none;}
+button::-moz-focus-inner {padding: 0; border: 0;}
+a, a:hover, a:visited{text-decoration: none;}
+ul, menu{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit; font-weight: 400;}
+
+body{
+  background: var(--color-bg);
+  color: var(--color-black);
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Стили контейнеров */
+.container{width: 100%; max-width: 1170px; margin: 0 auto; padding: 0;}
+
+/* Переменные */
+:root{
+  --color-white: #FFFFFF;
+  --color-black: #4A4A4A;
+  --color-bg: #F3F7FA;
+  --color-grey: #A0B0B9;
+  --color-blue: #2196F3;
+  --color-input-border: #9ABBCE;
+  --main-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
