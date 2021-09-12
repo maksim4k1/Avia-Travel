@@ -12,16 +12,29 @@ const MainElement = styled.div`
 `;
 
 function Main () {
-  const [transfers, setTransfers] = useState([]);
+  const [transfers, setTransfers] = useState(["all"]);
   const [sort, setSort] = useState("all");
   const [tickets, setTickets] = useState(ticketsArray);
 
   useEffect(() => {
-    const filteredTickets = [...tickets];
-    filteredTickets.filter(item => transfers.find(el => item.transfers.length === el) !== undefined);
-    setTickets(filteredTickets);
-    console.log(filteredTickets)
-    console.log(transfers, sort);
+    const filteredTickets = [...transfers].reduce((defVal, item) => {
+      if(item === "all"){
+        return [...ticketsArray];
+      }
+      const filteredArray = ticketsArray.filter(el => el.transfers.length === Number(item));
+      return [...defVal, ...filteredArray];
+    }, []);
+    if(sort === "priceUp"){
+      setTickets(filteredTickets.sort((a, b) => a.price - b.price));
+    } else if(sort === "priceDown"){
+      setTickets(filteredTickets.sort((a, b) => b.price - a.price));
+    } else if(sort === "timeUp"){
+      setTickets(filteredTickets.sort((a, b) => a.wayMinutes - b.wayMinutes));
+    } else if(sort === "timeDown"){
+      setTickets(filteredTickets.sort((a, b) => b.wayMinutes - a.wayMinutes));
+    } else {
+      setTickets(filteredTickets);
+    }
   }, [transfers, sort]);
   
   const changeTransferHandler = (event) => {
