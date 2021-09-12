@@ -27,9 +27,9 @@ function Sort ({title, inputs}) {
       {
         inputs.map((input, index) => {
           if(input.type === "checkbox"){
-            return <Checkbox key={index} body={input.body} name={input.name} id={nanoid()} onChangeHandler={input.onChangeHandler}/>
+            return <Checkbox key={index} id={nanoid()} {...input}/>
           } else{
-            return <Radio key={index} body={input.body} name={input.name} id={nanoid()} onChangeHandler={input.onChangeHandler}/>
+            return <Radio key={index} id={nanoid()} {...input}/>
           }
         })
       }

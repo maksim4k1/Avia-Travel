@@ -17,6 +17,7 @@ const Price = styled.div`
   color: var(--color-blue);
   font-size: 24px;
   font-weight: 600;
+  line-height: 24px;
 `;
 const Info = styled.ul`
   display: flex;
