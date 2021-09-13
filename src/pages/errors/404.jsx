@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import { URL } from "../../routers";
 import { gap } from "../../styles/mixins";
 import style from "./Error404.module.scss";
 
@@ -26,7 +27,7 @@ function Error404 () {
     <Content>
       <Error>404</Error>
       <ErrorText>Page not found!</ErrorText>
-      <ErrorLink>Go to <NavLink to="/" className={style.link}>main page</NavLink></ErrorLink>
+      <ErrorLink>Go to <NavLink to={`${URL}/`} className={style.link}>main page</NavLink></ErrorLink>
     </Content>
   );
 }
