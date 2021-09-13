@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Avia-Travel/static/css/main.babd9fc2.chunk.css",
+    "main.js": "/Avia-Travel/static/js/main.376bfe87.chunk.js",
+    "main.js.map": "/Avia-Travel/static/js/main.376bfe87.chunk.js.map",
+    "runtime-main.js": "/Avia-Travel/static/js/runtime-main.d0c06bbc.js",
+    "runtime-main.js.map": "/Avia-Travel/static/js/runtime-main.d0c06bbc.js.map",
+    "static/js/2.a06b4939.chunk.js": "/Avia-Travel/static/js/2.a06b4939.chunk.js",
+    "static/js/2.a06b4939.chunk.js.map": "/Avia-Travel/static/js/2.a06b4939.chunk.js.map",
+    "index.html": "/Avia-Travel/index.html",
+    "static/css/main.babd9fc2.chunk.css.map": "/Avia-Travel/static/css/main.babd9fc2.chunk.css.map",
+    "static/js/2.a06b4939.chunk.js.LICENSE.txt": "/Avia-Travel/static/js/2.a06b4939.chunk.js.LICENSE.txt",
+    "static/media/Logo.a343702c.svg": "/Avia-Travel/static/media/Logo.a343702c.svg",
+    "static/media/Checkbox.module.scss": "/Avia-Travel/static/media/Shape.b3ce3c21.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d0c06bbc.js",
+    "static/js/2.a06b4939.chunk.js",
+    "static/css/main.babd9fc2.chunk.css",
+    "static/js/main.376bfe87.chunk.js"
+  ]
+}
