@@ -1,0 +1,42 @@
+.input{
+  display: none;
+  &:checked + label::before{
+    border: 1px solid var(--color-blue);
+  }
+  &:checked + label::after{
+    background-image: url(../../../assets/Shape.svg);
+  }
+}
+.label{
+  height: 40px;
+  width: 100%;
+  padding: 20px;
+  padding-left: 50px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-size: 13px;
+  line-height: 20px;
+  &:hover{
+    background: var(--color-bg-hover);
+    cursor: pointer;
+  }
+  &::before, &::after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+  }
+  &::before{
+    border: 1px solid var(--color-input-border);
+    border-radius: 2px;
+  }
+  &::after{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 12px;
+  }
+}

@@ -1,4 +1,5 @@
-export default [
+
+const tickets = [
   {
     id: 1,
     price: 14300,
@@ -42,3 +43,5 @@ export default [
     transfers: []
   }
 ];
+
+export default tickets;
