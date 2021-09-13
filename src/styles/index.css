@@ -37,7 +37,7 @@ body{
 }
 
 /* Стили контейнеров */
-.container{width: 100%; max-width: 755px; margin: 0 auto; padding: 0 28px; box-sizing: initial;}
+.container{width: 100%; max-width: calc(755px + (28px * 2)); margin: 0 auto; padding: 0 28px;}
 
 /* Переменные */
 :root{

@@ -9,21 +9,28 @@ import { useState } from "react/cjs/react.development";
 const MainElement = styled.div`
   display: flex;
   ${gap("21px")}
+  @media screen and (max-width: 650px){
+    flex-flow: column;
+    ${gap("33px")}
+  }
 `;
 
 function Main () {
-  const [transfers, setTransfers] = useState(["all"]);
+  const [transfers, setTransfers] = useState([]);
   const [sort, setSort] = useState("all");
   const [tickets, setTickets] = useState(ticketsArray);
 
   useEffect(() => {
-    const filteredTickets = [...transfers].reduce((defVal, item) => {
+    let filteredTickets = [...transfers].reduce((defVal, item) => {
       if(item === "all"){
         return [...ticketsArray];
       }
       const filteredArray = ticketsArray.filter(el => el.transfers.length === Number(item));
       return [...defVal, ...filteredArray];
     }, []);
+    if(!transfers.length){
+      filteredTickets = ticketsArray;
+    }
     if(sort === "priceUp"){
       setTickets(filteredTickets.sort((a, b) => a.price - b.price));
     } else if(sort === "priceDown"){
@@ -39,7 +46,11 @@ function Main () {
   
   const changeTransferHandler = (event) => {
     if(event.target.value === "all"){
-      setTransfers([event.target.value]);
+      if(!transfers.find(item => item === "all")){
+        setTransfers([event.target.value]);
+      } else{
+        setTransfers([]);
+      }
     } else{
       if(!transfers.find(item => item === event.target.value)){
         if(transfers.find(item => item === "all")){

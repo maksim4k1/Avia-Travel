@@ -4,7 +4,6 @@ import { gap } from "../../styles/mixins";
 
 const TicketElement = styled.li`
   width: 100%;
-  height: 147px;
   padding: 26px 20px 32px;
   display: flex;
   flex-flow: column;
@@ -23,9 +22,14 @@ const Info = styled.ul`
   display: flex;
   justify-content: space-between;
   ${gap("20px")}
+  @media screen and (max-width: 700px){
+    flex-flow: wrap;
+    ${gap("14px")}
+  }
 `;
 const InfoItem = styled.li`
-  width: 141px;
+  width: 100%;
+  max-width: 141px;
 `;
 const InfoTitle = styled.h5`
   color: var(--color-grey);

@@ -6,9 +6,17 @@ import Sort from "../Sort";
 const FilterElement = styled.div`
   width: 100%;
   max-width: 232px;
+  min-width: 232px;
   display: flex;
   flex-flow: column;
   ${gap("20px")}
+  @media screen and (max-width: 650px){
+    max-width: 100%;
+    flex-flow: row;
+  }
+  @media screen and (max-width: 450px){
+    flex-flow: row wrap;
+  }
 `;
 
 function Filter ({changeTransferHandler, changeSortHandler, checkboxes}) {
