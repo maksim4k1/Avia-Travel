@@ -6,11 +6,11 @@ function AppRouters () {
   return(
     <Switch>
       {
-        routers.map(({path, component, exact}, index) => {
-          return <Route key={index} path={path} component={component} exact={exact}/>
+        routers.map((route, index) => {
+          return <Route key={index} {...route}/>
         })
       }
-      <Redirect to="/error/404"/>
+      <Redirect to="/"/>
     </Switch>
   );
 }
